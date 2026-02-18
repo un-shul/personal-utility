@@ -8,7 +8,8 @@ export default function DayTypePage() {
 
   const checkDay = async () => {
     setLoading(true);
-    const res = await fetch(`/api/day-type?date=${date}`);
+    //const res = await fetch(`/api/day-type?date=${date}`);
+    const res = await fetch(`/api/day_logic?date=${date}`);
     const data = await res.json();
     setResult(data.result);
     setLoading(false);
